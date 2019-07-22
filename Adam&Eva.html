@@ -43,7 +43,7 @@
             }
 
             eat(apple) {  
-                apple.descrise();
+                apple.descricse();
                 this.weight = this.weight + 1;
                 console.log(this.name + " an xong roi");
             }
@@ -56,12 +56,13 @@
                 
                 this.weight = weight;
             }
-            descrise() {
+            descricse() {
                 this.weight = this.weight - 1;
                 console.log("weight", this.weight);
                 if (this.weight==0) {
                     document.getElementById("adamEat").disabled = true;
                     document.getElementById("evaEat").disabled = true;
+                    alert("Tao het roi")
                 }
                 
             }
@@ -76,8 +77,8 @@
         function Eat(id) {
             let obj = id === 1 ? adam : eva;
             obj.eat(apple);
-            adamWeight.innerHTML = this.weight;
-            evaWeight.innerHTML = this.weight;
+            adamWeight.innerHTML = adam.weight;
+            evaWeight.innerHTML = eva.weight;
         }
         
     </script>
